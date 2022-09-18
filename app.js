@@ -35,9 +35,9 @@ function calculateProfitOrLoss(initialRate, finalRate, quantity) {
 }
 
 function submitHandler() {
-  const initialRate = initialPrice.value;
-  const finalRate = finalPrice.value;
-  const quantity = noOfStocks.value
+  const initialRate = Number(initialPrice.value);
+  const finalRate = Number(finalPrice.value);
+  const quantity = Number(noOfStocks.value);
 
   if ((initialRate && finalRate && quantity) == '') {
     outputSection.innerText = "Please enter all the values"
