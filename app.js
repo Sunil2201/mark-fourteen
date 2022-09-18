@@ -38,14 +38,18 @@ function submitHandler() {
   const initialRate = Number(initialPrice.value);
   const finalRate = Number(finalPrice.value);
   const quantity = Number(noOfStocks.value);
+  console.log(typeof initialRate)
 
-  if (initialRate == null && finalRate == null && quantity == null) {
+  if ((initialPrice.value && finalPrice.value && noOfStocks.value) === ""){
+    console.log("I am here")
     outputSection.innerText = "Please enter all the values"
+    outputSection.style.color = "#000000"
   }
   else if (initialRate >= 0 && quantity > 0 && finalRate >= 0) {
     calculateProfitOrLoss(initialRate, finalRate, quantity)
   }
   else {
     outputSection.innerText = "Please enter valid values"
+    outputSection.style.color = "#000000"
   }
 }
