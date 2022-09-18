@@ -39,7 +39,7 @@ function submitHandler() {
   const finalRate = Number(finalPrice.value);
   const quantity = Number(noOfStocks.value);
 
-  if ((initialRate && finalRate && quantity) == '') {
+  if (initialRate == null && finalRate == null && quantity == null) {
     outputSection.innerText = "Please enter all the values"
   }
   else if (initialRate >= 0 && quantity > 0 && finalRate >= 0) {
