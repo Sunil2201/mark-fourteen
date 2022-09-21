@@ -45,7 +45,7 @@ function submitHandler() {
     outputSection.innerText = "Please enter all the values"
     outputSection.style.color = "#000000"
   }
-  else if (initialRate >= 0 && quantity > 0 && finalRate >= 0) {
+  else if (initialRate > 0 && quantity > 0 && finalRate >= 0) {
     calculateProfitOrLoss(initialRate, finalRate, quantity)
   }
   else {
